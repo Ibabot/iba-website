@@ -1,0 +1,12 @@
+@import "../styles/_variables.scss";
+
+.header {
+    background-color: $isb-red;
+    min-height: 30vh;
+    padding: 30px;
+    color: white;
+
+    .logo {
+        text-align: left;
+    }
+}
