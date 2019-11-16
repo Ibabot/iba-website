@@ -5,12 +5,12 @@ function ChatBox() {
     return (
         <Widget
             interval={2000}
-            socketUrl={"http://localhost:5000"}
-            socketPath={"/"}
+            socketUrl={"http://localhost:5005"}
+            socketPath={"/socket.io/"}
             title={"Íba"}
             inputTextFieldHint={"Type a message..."}
             connectingText={"Waiting for server..."}
-            hideWhenNotConnected
+            hideWhenNotConnected={false}
             connectOn={"mount"}
             embedded={true}
             showFullScreenButton={false}
