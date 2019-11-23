@@ -5,7 +5,7 @@ import logo from '../assets/img/isb-logo.svg';
 
 function Header() {
     return(
-        <header className="header">
+        <header className="web-header">
             <div className="logo">
                 <img src={logo} alt="Íslandsbankinn logo" className="logo" />
             </div>            
