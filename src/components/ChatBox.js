@@ -8,7 +8,7 @@ function ChatBox() {
     return (
       <Widget
         interval={2000}
-        socketUrl={"https://ibachatbot.herokuapp.com/"}
+        socketUrl={"http://localhost:5005/"}
         socketPath={"/socket.io/"}
         title={"Íba"}
         subtitle={"Íslandsbanki"}
@@ -30,7 +30,7 @@ function ChatBox() {
               height: 200
             }
           },
-          storage: "local"
+          storage: "session"
         }}
         customComponent={messageData => <div>Custom React component</div>}
       />
