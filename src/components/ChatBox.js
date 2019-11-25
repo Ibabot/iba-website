@@ -8,7 +8,7 @@ function ChatBox() {
     return (
       <Widget
         interval={2000}
-        socketUrl={"https://ibachatbot.herokuapp.com/"}
+        socketUrl={"https://ibachatbot.herokuapp.com:5005/"}
         socketPath={"/socket.io/"}
         title={"Íba"}
         subtitle={"Íslandsbanki"}
