@@ -7,8 +7,9 @@ import robot from "../assets/img/iba-avatar.png";
 function ChatBox() {
     return (
       <Widget
+        initPayload={"first-greet"}
         interval={2000}
-        socketUrl={"https://ibachatbot.herokuapp.com"}
+        socketUrl={"http://localhost:5005/"}
         socketPath={"/socket.io/"}
         title={"Íba"}
         subtitle={"Íslandsbanki"}
