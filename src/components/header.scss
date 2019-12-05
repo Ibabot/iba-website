@@ -1,12 +1,42 @@
 @import "../styles/_variables.scss";
+@import "../styles/_mixins.scss";
+
 
 .web-header {
-    background-color: $isb-red;
-    min-height: 30vh;
+    min-height: 40vh;
     padding: 30px;
     color: white;
+    background-image: url('../assets/img/bg.png');
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
 
     .logo {
         text-align: left;
+    }
+
+    .web-header-text {
+        text-align: left;
+        padding: 50px 0;
+        color: $isb-red;
+        margin-left: 10vmin;
+
+        p {
+            color: $text-gray;
+        }
+    }
+
+    .btn {
+        background-color: $isb-red;
+        color: white;
+        text-decoration: none;
+        line-height: 2;
+        padding: 20px 30px;
+        @include transition;
+        @include border-radius(3px);
+
+        &:hover {
+            background-color: #c81e35;
+        }
     }
 }
