@@ -1,32 +1,31 @@
 import React from "react";
 import { geolocated } from "react-geolocated";
 
-const serverURL = "http://localhost:5056/webhook";
+const serverURL = "http://localhost:5006/webhooks/rest/webhook";
 
 class Geolocator extends React.Component {
-  // Fetch the geolocation on first mount
-/*   componentDidMount() {
-    this.sendGeolocation();
-  } */
-
   // Sends the geolocation to the Rasa server
   sendGeolocation = () => {
-    if(this.props.isGeolocationAvailable && this.props.isGeolocationEnabled) {
-        fetch(serverURL, {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            longitude: 10,
-            latitude: 20
-          })
-        });
+    if (this.props.isGeolocationAvailable && this.props.isGeolocationEnabled) {
+      fetch(serverURL, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          sender: "Rasa",
+          message: "64.153960 -21.950570"
+        })
+      });
     }
-    
   };
 
+  // Fetch the geolocation on first mount
+  componentDidMount() {
+    this.sendGeolocation();
+  }
+   
   render() {
     return !this.props.isGeolocationAvailable ? (
       <div>Your browser does not support Geolocation</div>
