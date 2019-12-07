@@ -1,35 +1,66 @@
+@import "../styles/_mixins.scss";
 @import "../styles/_variables.scss";
 
 
 .chat-container {
-    height: 100%;
+    min-height: 60vh;
+    min-width: 100%;
+    background-color: $light-gray;
 
     .widget-embedded {
         height: 60vh;
-        bottom: -60vh;
+        bottom: 0;
+        width: 70%;
+        right: 0;
+        @include center(20%, 0);
 
         .sender, .new-message, .send {
             background-color: white;
         }
-
-        .messages-container {
-            background-color: $light-gray;
+        .sender {
+            border-top: 1px solid darken($light-gray, 2%);
         }
 
+        .messages-container {
+            background-color: white;
+            padding: 30px 20px;
+        }
 
         .message {
             .client {
                 border: 1px solid $isb-red;
-                color: black;
-                background-color: white;
-            // background-color: lighten($isb-red, 20%);            
+                color: color;
+                background-color: $isb-red;
             }
 
             .response {
-            // border: 1px solid $isb-red;
                 color: black;
-                background-color: white;
+                background-color: darken($light-gray, 2%);
             }
+
+            .replies {
+                .reply {
+                    border: 1px solid $isb-red;
+                    color: $isb-red;
+                    padding: 10px 15px;
+                    @include transition;
+
+                    &:hover {
+                        border: 1px solid lighten($isb-red, 10%);
+                        background-color: lighten($isb-red, 10%);
+                        color: white;
+                    }
+                }
+            }
+        }
+            
+        @media(max-width: $sm-width) {
+            height: 60vh;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            right: 0;
+            @include center(0, 0);
         }
     }
 
@@ -68,11 +99,9 @@
              border: 1px solid $isb-red;
             color: black;
             background-color: white;
-           // background-color: lighten($isb-red, 20%);            
         }
 
         .response {
-           // border: 1px solid $isb-red;
             color: black;
             background-color: white;
         }

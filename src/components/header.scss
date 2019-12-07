@@ -8,8 +8,9 @@
     color: white;
     background-image: url('../assets/img/bg.png');
     background-position: bottom right;
-    background-size: contain;
+    background-size: 40vmin;
     background-repeat: no-repeat;
+    background-color: $isb-red;
 
     .logo {
         text-align: left;
@@ -17,26 +18,75 @@
 
     .web-header-text {
         text-align: left;
-        padding: 50px 0;
-        color: $isb-red;
+        padding: 10px 0;
         margin-left: 10vmin;
 
+       h1 {
+           font-size: 5vmin;
+           margin: 0;
+           margin-bottom: 30px;
+       }
+
+       h2 {
+           margin: 10px;
+           font-size: 2vmin;
+           color: $light-gray;
+           font-weight: normal;
+       }
+
         p {
-            color: $text-gray;
+            color: $light-gray;
+            margin: 0;
         }
+
+        a {
+            color: white;
+            font-weight: bold;
+            text-decoration-style: dotted;
+            
+        }
+        .btn {
+            margin: 20px 0;
+            display: inline-block;
+            background-color: white;
+            color: $isb-red;
+            text-decoration: none;
+            line-height: 2;
+            padding: 20px 30px;
+            @include transition;
+            @include border-radius(3px);
+            color: $isb-red;
+
+            &:hover {
+                background-color: $light-gray;
+            }
+        }
+
+        @media(max-width: $md-width) {
+            margin-left: 0;
+
+            h1 {
+                font-size: 32px;
+                margin-top: 20px;
+            }
+
+            h2 {
+                margin: 10px;
+                font-size: 20px;
+                color: $light-gray;
+                font-weight: normal;
+            }
+            .btn {
+                margin: 20px 0;
+                padding: 10px 20px;
+                text-align: center;
+                line-height: 23px;
+            }
+
+        }        
     }
 
-    .btn {
-        background-color: $isb-red;
-        color: white;
-        text-decoration: none;
-        line-height: 2;
-        padding: 20px 30px;
-        @include transition;
-        @include border-radius(3px);
-
-        &:hover {
-            background-color: #c81e35;
-        }
+    @media(max-width: $sm-width) {
+        background-image: none;
     }
 }
