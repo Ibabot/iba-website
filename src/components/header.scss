@@ -14,6 +14,7 @@
 
     .logo {
         text-align: left;
+        max-width: 125px;
     }
 
     .web-header-text {
@@ -22,14 +23,14 @@
         margin-left: 10vmin;
 
        h1 {
-           font-size: 5vmin;
+           font-size: 4.5vmin;
            margin: 0;
            margin-bottom: 30px;
        }
 
        h2 {
            margin: 10px;
-           font-size: 2vmin;
+           font-size: 1.9vmin;
            color: $light-gray;
            font-weight: normal;
        }
@@ -51,7 +52,6 @@
             background-color: white;
             color: $isb-red;
             text-decoration: none;
-            line-height: 2;
             padding: 20px 30px;
             @include transition;
             @include border-radius(3px);
@@ -90,5 +90,10 @@
         background-image: none;
         height: auto;
         min-height: 40vh;
+        
+        .logo {
+            text-align: left;
+            max-width: 100px;
+        }
     }
 }
