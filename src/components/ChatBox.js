@@ -14,7 +14,7 @@ function ChatBox() {
         title={"Íba"}
         subtitle={"Íslandsbanki"}
         inputTextFieldHint={"Sláðu inn skilaboð..."}
-        connectingText={"Waiting for server..."}
+        connectingText={"Bið eftir vefþjóni..."}
         hideWhenNotConnected={false}
         connectOn={"mount"}
         embedded={true}
