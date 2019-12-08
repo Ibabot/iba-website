@@ -8,8 +8,8 @@
     background-color: $light-gray;
 
     .widget-embedded {
-        height: 60vh;
-        bottom: 0;
+        height: 50vh;
+        bottom: 10vh;
         width: 70%;
         right: 0;
         @include center(20%, 0);
