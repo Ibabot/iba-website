@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import ChatBox from "./ChatBox";
 
 
-it("renders without crashing", () => {
+it("renders ChatBox.js without crashing", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<ChatBox></ChatBox>, div)
+    ReactDOM.render(<ChatBox />, div)
 })

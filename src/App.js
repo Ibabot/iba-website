@@ -3,7 +3,7 @@ import React from "react";
 import "./App.scss";
 
 import ChatBox from "./components/ChatBox";
-import Header from "./components/Header.js";
+import Header from "./components/Header";
 
 function App() {
   return (

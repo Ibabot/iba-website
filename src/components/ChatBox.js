@@ -8,14 +8,14 @@ function ChatBox() {
     return (
       <Widget
         initPayload={"first-greet"}
-        interval={2000}
+        interval={10}
         socketUrl={"https://ibachatbot.herokuapp.com"}
         socketPath={"/socket.io/"}
         title={"Íba"}
         subtitle={"Íslandsbanki"}
         inputTextFieldHint={"Sláðu inn skilaboð..."}
         connectingText={"Bið eftir vefþjóni..."}
-        hideWhenNotConnected={false}
+        hideWhenNotConnected={true}
         connectOn={"mount"}
         embedded={true}
         profileAvatar={robot}

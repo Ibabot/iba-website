@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "iba-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,7 +8,6 @@
     "rasa-webchat": "github:mrbot-ai/rasa-webchat",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
   },
   "scripts": {
@@ -35,6 +34,6 @@
   "devDependencies": {
     "@testing-library/react": "^9.3.2",
     "jest-dom": "^4.0.0",
-    "react-test-render": "^1.1.2"
+    "react-test-renderer": "^16.12.0"
   }
 }
