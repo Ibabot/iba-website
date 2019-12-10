@@ -44,7 +44,3 @@ function Header() {
 }
 
 export default Header;
-
-{/* <a href="https://www.freepik.com/free-photos-vectors/technology">
-  Technology vector created by upklyak - www.freepik.com
-</a>; */}
