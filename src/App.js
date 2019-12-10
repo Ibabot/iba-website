@@ -1,26 +1,21 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import './App.scss';
-import Home from './pages/Home';
-import Header from './components/Header.js';
+import React from "react";
 
+import "./App.scss";
 
-class App extends Component {
-  render() {
-    const App = () => (
+import ChatBox from "./components/ChatBox";
+import Header from "./components/Header.js";
+
+function App() {
+  return (
+    <div className="App">
       <div className="iba-web">
         <Header />
-        <Switch>
-          <Route exact path='/' component={Home} />
-        </Switch>
+        <div className="chat-container">
+          <ChatBox />
+        </div>
       </div>
-    )
-    return (
-      <Switch>
-        <App />
-      </Switch>
-    );
-  }
+    </div>
+  )
 }
 
 export default App;
