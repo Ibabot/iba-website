@@ -5,7 +5,7 @@ import logo from '../assets/img/isb-logo.svg';
 
 function Header() {
     return (
-      <header className="web-header">
+      <header className="web-header" id="web-header">
         <div className="logo" data-aos="fade-right">
           <img src={logo} alt="Íslandsbankinn logo" className="logo" />
         </div>
@@ -23,8 +23,10 @@ function Header() {
             spjallinu.
           </h2>
           <a
+            data-testid="get-assistance"
             className="btn btn-red"
             href="https://www.islandsbanki.is/is/vara/thjonusta/hafa-samband"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Hafðu samband við þjónustuver bankans
@@ -32,7 +34,9 @@ function Header() {
           <p>
             Ég er líka á{" "}
             <a
+              data-testid="open-facebook"
               href="https://www.messenger.com/t/iba.spjallmenni"
+              rel="noopener noreferrer"
               target="_blank"
             >
               Facebook
