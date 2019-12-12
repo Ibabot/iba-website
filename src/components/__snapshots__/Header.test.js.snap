@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.js: matches snapshot 1`] = `
+<header
+  className="web-header"
+  id="web-header"
+>
+  <div
+    className="logo"
+    data-aos="fade-right"
+  >
+    <img
+      alt="Íslandsbankinn logo"
+      className="logo"
+      src="isb-logo.svg"
+    />
+  </div>
+  <div
+    className="web-header-text"
+    data-aos="fade-left"
+    data-aos-delay="100"
+  >
+    <h1>
+      Segðu halló við Íba
+    </h1>
+    <h2
+      className="bottom-space"
+    >
+      <strong>
+        Íba er snjallmenni Íslandsbanka.
+      </strong>
+    </h2>
+    <h2>
+      Íba getur svarað almennum spurningum og fyrirspurnum hér í spjallinu.
+    </h2>
+    <a
+      className="btn btn-red"
+      data-testid="get-assistance"
+      href="https://www.islandsbanki.is/is/vara/thjonusta/hafa-samband"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      Hafðu samband við þjónustuver bankans
+    </a>
+    <p>
+      Ég er líka á
+       
+      <a
+        data-testid="open-facebook"
+        href="https://www.messenger.com/t/iba.spjallmenni"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Facebook
+      </a>
+    </p>
+  </div>
+</header>
+`;
