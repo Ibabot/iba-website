@@ -6,6 +6,21 @@
     min-height: 60vh;
     min-width: 100%;
     background-color: $light-gray;
+    background-image: url('../assets/img/iba-avatar.png');
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: 'BIÐ EFTIR VEFÞJÓNI';
+        width: 100%;
+        min-height: 20vh;
+        top: 45%;
+        @include center(-50%, 0);
+        animation: pulse infinite 2s linear;
+        color: $text-gray;
+    }
 
     .widget-embedded {
         height: 50vh;
@@ -61,6 +76,21 @@
             left: 0;
             right: 0;
             @include center(0, 0);
+        }
+    }
+
+    @media(max-width: $sm-width) {
+        &:after {
+            top: 55%;
+        }
+    }
+
+    @keyframes pulse {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
         }
     }
 
