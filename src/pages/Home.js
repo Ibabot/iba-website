@@ -4,15 +4,30 @@ import Geolocator from "../components/Geolocator";
 
 
 class Home extends Component {
-    render() {
-        return (
-          <div className="App">
-            <Geolocator />
-            <div className="chat-container">
-              <ChatBox />
-            </div>
-          </div>
-        );
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      getLocation: false
+    };
+  }
+
+  update(value) {
+    return () => {
+      this.setState({
+        getLocation: value
+      });
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Geolocator data={this.update.bind(this)} />
+        <div className="chat-container">
+          <ChatBox data={this.update.bind(this)} />
+        </div>
+      </div>
+    );
+  }
 }
 export default Home;

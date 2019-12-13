@@ -4,6 +4,13 @@ import { geolocated } from "react-geolocated";
 const serverURL = "http://localhost:5006/webhooks/rest/webhook";
 
 class Geolocator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter2: 5
+    };
+  }
+  
   // Sends the geolocation to the Rasa server
   sendGeolocation = () => {
     if (this.props.isGeolocationAvailable && this.props.isGeolocationEnabled) {
@@ -25,37 +32,17 @@ class Geolocator extends React.Component {
   componentDidMount() {
     this.sendGeolocation();
   }
-   
+
   render() {
     return !this.props.isGeolocationAvailable ? (
       <div>Your browser does not support Geolocation</div>
     ) : !this.props.isGeolocationEnabled ? (
       <div>Geolocation is not enabled</div>
     ) : this.props.coords ? (
-      <table>
-        <tbody>
-          <tr>
-            <td>latitude</td>
-            <td>{this.props.coords.latitude}</td>
-          </tr>
-          <tr>
-            <td>longitude</td>
-            <td>{this.props.coords.longitude}</td>
-          </tr>
-          <tr>
-            <td>altitude</td>
-            <td>{this.props.coords.altitude}</td>
-          </tr>
-          <tr>
-            <td>heading</td>
-            <td>{this.props.coords.heading}</td>
-          </tr>
-          <tr>
-            <td>speed</td>
-            <td>{this.props.coords.speed}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div>
+        <button onClick={this.props.data(this.state.counter2)}>Click me</button>
+        <span>{this.state.counter2}</span>
+      </div>
     ) : (
       <div>Getting the location data&hellip; </div>
     );

@@ -4,42 +4,20 @@ import './chatbox.scss';
 import chat from "../assets/img/chat.png";
 import robot from "../assets/img/iba-avatar.png";
 
-function ChatBox() {
+function ChatBox({ ...props }) {
     function checkIfGeolocation() {
-      console.log("the bot said something");
-      let messageCount = document.querySelectorAll(".response .message-text").length;
-      let response = document.querySelectorAll(".response .message-text .markdown p span")[messageCount - 1].textContent;
-      console.log(response);
-      if (response === "Ok!") {
-        console.log("Ok it is");
-        fetch("http://localhost:5006/webhooks/rest/webhook", {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            sender: "Rasa",
-            message: "64.153960 -21.950570"
-          })
-        });
-      }
     }
-
     return (
       <Widget
         initPayload={"first-greet"}
         interval={2000}
-        socketUrl={"http://localhost:5006"}
+        socketUrl={"https://ibachatbot.herokuapp.com"}
         socketPath={"/socket.io/"}
-<<<<<<< HEAD
+        customData={{ latitude: "64.153960", longitude: "-21.950570" }}
         onSocketEvent={{
-          'bot_uttered': () => checkIfGeolocation(),
-          'connect': () => console.log('connection established'),
+          bot_uttered: () => checkIfGeolocation(),
+          connect: () => console.log("connection established")
         }}
-=======
-        customData={{"latitude":"64.153960", "longitude":"-21.950570"}}
->>>>>>> master
         title={"Íba"}
         subtitle={"Íslandsbanki"}
         inputTextFieldHint={"Sláðu inn skilaboð..."}
