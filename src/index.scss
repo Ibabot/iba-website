@@ -1,5 +1,7 @@
 @import "./styles/mixins";
 
+
+
 *,
 *:before,
 *:after {
@@ -24,6 +26,10 @@ code {
     monospace;
 }
 
+#root {
+  overflow-x: hidden;
+}
+
 .input {  
   border: none;
   padding: 15px 20px;
@@ -33,4 +39,8 @@ code {
   @include box-shadow(none);
   min-width: 400px;
   width: 30vmin;
+}
+
+.bottom-space {
+  margin-bottom: 50px;
 }

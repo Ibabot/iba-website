@@ -28,18 +28,23 @@ function ChatBox() {
 
     return (
       <Widget
+        initPayload={"first-greet"}
         interval={2000}
         socketUrl={"http://localhost:5006"}
         socketPath={"/socket.io/"}
+<<<<<<< HEAD
         onSocketEvent={{
           'bot_uttered': () => checkIfGeolocation(),
           'connect': () => console.log('connection established'),
         }}
+=======
+        customData={{"latitude":"64.153960", "longitude":"-21.950570"}}
+>>>>>>> master
         title={"Íba"}
         subtitle={"Íslandsbanki"}
         inputTextFieldHint={"Sláðu inn skilaboð..."}
-        connectingText={"Waiting for server..."}
-        hideWhenNotConnected={false}
+        connectingText={"Bið eftir vefþjóni..."}
+        hideWhenNotConnected={true}
         connectOn={"mount"}
         embedded={true}
         profileAvatar={robot}
