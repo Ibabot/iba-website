@@ -11,6 +11,7 @@ function ChatBox() {
         interval={2000}
         socketUrl={"https://ibachatbot.herokuapp.com"}
         socketPath={"/socket.io/"}
+        customData={{"latitude":"64.153960", "longitude":"-21.950570"}}
         title={"Íba"}
         subtitle={"Íslandsbanki"}
         inputTextFieldHint={"Sláðu inn skilaboð..."}
