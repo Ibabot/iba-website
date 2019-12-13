@@ -23,8 +23,8 @@ function ChatBox() {
         showFullScreenButton={false}
         openLauncherImage={chat}
         closeLauncherImage="myCustomCloseImage.png"
-        displayUnreadCount={true} // --> [view](./assets/unread_count_pastille.png)
-        showMessageDate={true} // display message date, can use fonction as (timestamp, message) => return 'my custom date'
+        displayUnreadCount={true} 
+        showMessageDate={true}
         params={{
           images: {
             dims: {

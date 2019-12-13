@@ -1,7 +1,5 @@
 import React from "react";
-
 import "./App.scss";
-
 import ChatBox from "./components/ChatBox";
 import Header from "./components/Header";
 
